@@ -24,6 +24,9 @@ trigtype = {
     8 : "Sine",
     9 : "Cosine",
     10 : "Tangent",
+    11 : "Inverse Sine",
+    12 : "Inverse Cosine",
+    13 : "Inverse Tangent"
 }
 print ("Select operation type:")
 choice1 = opselect(optype)
@@ -52,6 +55,7 @@ num1 = int (input("Enter first number:  "))
 
 if 1 <= int(choice) <= 6:
   num2 = int (input("Enter second number:  "))
+ 
 
 #TODO investigate if myfunc definition calls all methods or not
 myfunc = {
@@ -64,7 +68,10 @@ myfunc = {
 '7' : squareroot(num1),
 '8' : sine(num1),
 '9' : cosine(num1),
-'10' : tangent(num1)
+'10' : tangent(num1),
+'11' : invsine(num1),
+'12' : invcosine(num1),
+'13' : invtangent(num1)
 }
 #Just print the answer
 print("The Answer is :", myfunc[choice])
@@ -80,7 +87,10 @@ myoutput = {
 '7' : ("√ " + str(num1) + " = " + str(squareroot(num1))),
 '8' : ("sin(" + str(num1) + ") = " + str(sine(num1))),
 '9' : ("cos(" + str(num1) + ") = " + str(cosine(num1))),
-'10' :("tan(" + str(num1) + ") = " + str(tangent(num1)))
+'10' : ("tan(" + str(num1) + ") = " + str(tangent(num1))),
+'11' : ("invsin(" + str(num1) +") =" + str(invsine(num1))),
+'12' : ("invcos(" + str(num1) +") =" + str(invcosine(num1))),
+'13' : ("invtan(" + str(num1) +") =" + str(invtangent(num1))),
 }
 
 #Then print the equation and answer
