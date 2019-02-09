@@ -8,6 +8,7 @@ optype = {
   1 : "Arithmetic",
   2 : "Exponential",
   3 : "Trigonometric",
+  4 : "Inverse Trigonometric",
 }
 #Optiontype
 arithtype = {
@@ -22,13 +23,15 @@ exptype = {
     7 : "Square Root",
 }
 trigtype = {
-    8 : "Sine",
-    9 : "Cosine",
-    10 : "Tangent",
-    #11 : "Inverse Sine",
-    #12 : "Inverse Cosine",
-    #13 : "Inverse Tangent"
+   8 : "Sine",
+   9 : "Cosine",
+   10 : "Tangent",
 }
+#invtrigtype = {
+ # 11 : "Inverse Sine",
+ # 12 : "Inverse Cosine",
+ # 13 : "Inverse Tangent"
+#}
 #submenus of optype/inv functions removed- see below comments
 
 print ("Select operation type:")
@@ -43,6 +46,8 @@ elif choice1 == "2":
   choice = opselect(exptype)
 elif choice1 == "3":
   choice = opselect(trigtype)
+#elif choice1 == "4":
+#  choice = opselect(invtrigtype)
 else:
   invalidChoice = True
 
