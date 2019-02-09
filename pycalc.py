@@ -1,14 +1,15 @@
 import time
 import sys
 import math
-from calcfunctions import *
+from calcfunctions import * #Imports functions used in calculator
 invalidChoice = False # Default to valid choice
+
 optype = {
   1 : "Arithmetic",
   2 : "Exponential",
   3 : "Trigonometric",
 }
-
+#Optiontype
 arithtype = {
     1 : "Add",
     2 : "Subtract",
@@ -24,25 +25,25 @@ trigtype = {
     8 : "Sine",
     9 : "Cosine",
     10 : "Tangent",
-    11 : "Inverse Sine",
-    12 : "Inverse Cosine",
-    13 : "Inverse Tangent"
+    #11 : "Inverse Sine",
+    #12 : "Inverse Cosine",
+    #13 : "Inverse Tangent"
 }
+#submenus of optype/inv functions removed- see below comments
+
 print ("Select operation type:")
 choice1 = opselect(optype)
 print ("User Selected", choice1)
+#Points to opselect function in calcfunctions, returns whichever optype selected by user as shown in dict optype
 
-#This asks the user for which operation or function definition they want to call
+
 if choice1 == "1":
   choice = opselect(arithtype)
 elif choice1 == "2":
   choice = opselect(exptype)
 elif choice1 == "3":
   choice = opselect(trigtype)
-  #print ("11. Inverse Sine [Alpha testing]")
-  #print ("12. Inverse Cosine [Alpha testing]")
-  #print ("13. Inverse Tangent [Alpha testing]")
-else:    
+else:
   invalidChoice = True
 
 if invalidChoice:
@@ -69,9 +70,10 @@ myfunc = {
 '8' : sine(num1),
 '9' : cosine(num1),
 '10' : tangent(num1),
-'11' : invsine(num1),
-'12' : invcosine(num1),
-'13' : invtangent(num1)
+#'11' : invsine(num1),
+#'12' : invcosine(num1),
+#'13' : invtangent(num1)
+#Temporarily removed- see below comment
 }
 #Just print the answer
 print("The Answer is :", myfunc[choice])
@@ -88,9 +90,10 @@ myoutput = {
 '8' : ("sin(" + str(num1) + ") = " + str(sine(num1))),
 '9' : ("cos(" + str(num1) + ") = " + str(cosine(num1))),
 '10' : ("tan(" + str(num1) + ") = " + str(tangent(num1))),
-'11' : ("invsin(" + str(num1) +") =" + str(invsine(num1))),
-'12' : ("invcos(" + str(num1) +") =" + str(invcosine(num1))),
-'13' : ("invtan(" + str(num1) +") =" + str(invtangent(num1))),
+#'11' : ("invsin(" + str(num1) +") =" + str(invsine(num1))),
+#'12' : ("invcos(" + str(num1) +") =" + str(invcosine(num1))),
+#'13' : ("invtan(" + str(num1) +") =" + str(invtangent(num1))),
+#Above functions removed temporarily due to issues with large numbers
 }
 
 #Then print the equation and answer
