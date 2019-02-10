@@ -35,13 +35,13 @@ def tangent (x):
     return ("Tan(" + str(x) + ") = " + str(math.tan(x)))
 
 def invcosine (x):
-    return math.acos(x)
+    return ("Invcos(" + str(x) + ") = " + str(math.acos(x)))
 
 def invsine (x):
-    return math.asin(x)
+    return ("Invsin(" + str(x) + ") = " + str(math.asin(x)))
 
 def invtangent (x):
-    return math.atan(x)
+    return ("Invtan(" + str(x) + ") = " + str(math.atan(x)))
 
 def opselect (x):
   for option in x:
