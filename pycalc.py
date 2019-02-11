@@ -81,7 +81,7 @@ myfunc = {
 #Temporarily removed- see below comment
 }
 #Just print the answer
-print("The Answer is :", myfunc[choice])
+print(myfunc[choice])
 
 #TODO investigate if you can use print() in the dictionary
 #myoutput = {
