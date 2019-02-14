@@ -28,17 +28,17 @@ def invcosine (x):
   try:
    return math.acos(x)
   except:
-    print ("\n")
+    return
 def invsine (x):
   try:
    return math.asin(x)
   except:
-    print ("\n")
+    return
 def invtangent (x):
   try:
    return math.atan(x)
   except:
-    print ("\n")
+    return
 
 def opselect (x):
   for option in x:
