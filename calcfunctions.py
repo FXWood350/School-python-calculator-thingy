@@ -24,12 +24,22 @@ def sine (x):
     return math.sin(x)
 def tangent (x):
     return math.tan(x)
-#def invcosine (x):
-#    return math.acos(x)
-#def invsine (x):
-#    return math.asin(x)
-#def invtangent (x):
-#    return math.atan(x)
+def invcosine (x):
+  try:
+   return math.acos(x)
+  except:
+    print ("\n")
+def invsine (x):
+  try:
+   return math.asin(x)
+  except:
+    print ("\n")
+def invtangent (x):
+  try:
+   return math.atan(x)
+  except:
+    print ("\n")
+
 def opselect (x):
   for option in x:
     print (option,x[option])

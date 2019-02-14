@@ -27,11 +27,11 @@ trigtype = {
    9 : "Cosine",
    10 : "Tangent",
 }
-#invtrigtype = {
- # 11 : "Inverse Sine",
- # 12 : "Inverse Cosine",
- # 13 : "Inverse Tangent"
-#}
+invtrigtype = {
+  11 : "Inverse Sine",
+  12 : "Inverse Cosine",
+  13 : "Inverse Tangent"
+}
 #submenus of optype/inv functions removed- see below comments
 
 print ("Select operation type:")
@@ -46,8 +46,8 @@ elif choice1 == "2":
   choice = opselect(exptype)
 elif choice1 == "3":
   choice = opselect(trigtype)
-#elif choice1 == "4":
-#  choice = opselect(invtrigtype)
+elif choice1 == "4":
+  choice = opselect(invtrigtype)
 else:
   invalidChoice = True
 
@@ -75,9 +75,9 @@ myfunc = {
 '8' : sine(num1),
 '9' : cosine(num1),
 '10' : tangent(num1),
-#'11' : invsine(num1),
-#'12' : invcosine(num1),
-#'13' : invtangent(num1)
+'11' : invsine(num1),
+'12' : invcosine(num1),
+'13' : invtangent(num1)
 #Temporarily removed- see below comment
 }
 #Just print the answer
@@ -95,9 +95,9 @@ myoutput = {
 '8' : ("sin(" + str(num1) + ") = " + str(sine(num1))),
 '9' : ("cos(" + str(num1) + ") = " + str(cosine(num1))),
 '10' : ("tan(" + str(num1) + ") = " + str(tangent(num1))),
-#'11' : ("invsin(" + str(num1) +") =" + str(invsine(num1))),
-#'12' : ("invcos(" + str(num1) +") =" + str(invcosine(num1))),
-#'13' : ("invtan(" + str(num1) +") =" + str(invtangent(num1))),
+'11' : ("invsin(" + str(num1) +") =" + str(invsine(num1))),
+'12' : ("invcos(" + str(num1) +") =" + str(invcosine(num1))),
+'13' : ("invtan(" + str(num1) +") =" + str(invtangent(num1))),
 #Above functions removed temporarily due to issues with large numbers
 }
 
