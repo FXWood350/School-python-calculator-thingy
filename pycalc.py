@@ -51,7 +51,7 @@ elif choice1 == "4":
 else:
   invalidChoice = True
 
-if invalidChoice:
+if not choice or invalidChoice:
   print()
   print ("Invalid Choice")
   sys.exit()
