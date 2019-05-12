@@ -3,7 +3,7 @@ import math
 # flow
 
 choices = {
-    'arithmetic': {
+    'Arithmetic': {
         'add': lambda x, y: x + y,  # same as def add(x, y): return x + y
         'subtract': lambda x, y: x - y,
         'multiply': lambda x, y: x * y,
@@ -11,9 +11,20 @@ choices = {
     },
     # try filling the following values yourself:
 
-    'exponential': {},
-    'trigonometric': {},
-    'inverse trigonometric': {}
+    'exponential': {
+        'exponent':lambda x, y: x ** y,
+        'root': lambda x : math.sqrt(x)
+    },
+    'trigonometric': {
+        'cosine': lambda x : math.cos(x),
+        'sine': lambda x : math.sin(x),
+        'tangent': lambda x: math.tan(x)
+    },
+    'inverse trigonometric': {
+        'invcosine': lambda x: math.acos(x),
+        'invsine': lambda x: math.asin(x),
+        'invtangent': lambda x: math.atan(x)
+    }
 }
 
 # test your code, sometimes a subtle change can break everything:
