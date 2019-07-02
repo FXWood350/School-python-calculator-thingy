@@ -48,7 +48,7 @@ operation_map = {i: op for i, op in enumerate(choices.keys())}
 
 print('Select operation type: ')
 
-# this is called a list comprehension, also goole it :) 
+# this is called a list comprehension, also goole it :)
 [print(f'{key}: {value}') for key, value in operation_map.items()]
 
 # what will happen if the user types in a character instead of a number?
@@ -74,18 +74,18 @@ function_map = {
     }
 
 # let's add a tab here for esthetic purposes
-print('\tSelect function: ') 
+print('\tSelect function: ')
 [print(f'\t{key}: {value}') for key, value in function_map.items()]
 
-# we can reuse the choice variable, since we do not need its 
+# we can reuse the choice variable, since we do not need its
 # value any longer
 
-choice = int(input('? > '))
+functionChoice = int(input('? > '))
 
-if choice not in function_map:
+if functionChoice not in function_map:
     raise ValueError('Not a valid choice for a function.')
 
-function_name = function_map[choice]
+function_name = function_map[functionChoice]
 
 # let's copy the link to the function into a separate variable
 # we can do this, as all python functions are objects too
@@ -98,10 +98,15 @@ print(f'{operation_name} > {function_name}')
 # we are going to assume that the function takes two arguments
 
 arg1 = float(input('    argument 1 > '))
-arg2 = float(input('    argument 2 > '))
+
+if (choice == 0) or (choice == 1 and functionChoice == 0):
+   arg2 = float(input('    argument 2 > '))
+   result = func(arg1, arg2)
+else:
+    result = func(arg1)
 
 # ready to execute
-result = func(arg1, arg2)
+
 
 print('')
 print(f'result: {result}')
